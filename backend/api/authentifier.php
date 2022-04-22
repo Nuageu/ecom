@@ -9,15 +9,15 @@ if(isset($_SESSION['ident'])){
 }
 
 // Cas où la requête est mal formulée
-if(!isset($_REQUEST['email']) || !isset($_REQUEST['password'])){
+if(!isset($_POST['email']) || !isset($_POST['password'])){
     ProduceErrorRequest();
     return;
 }
 
 try {
     $user = new UserEntity();
-    $user->setEmail($_REQUEST['email']);
-    $user->setPassword($_REQUEST['password']);
+    $user->setEmail($_POST['email']);
+    $user->setPassword($_POST['password']);
     
     $dataAuth = $db->authentifier($user);
 

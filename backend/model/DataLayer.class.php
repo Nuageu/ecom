@@ -12,7 +12,6 @@ class DataLayer{
 
         try {
             $this->connexion = new PDO($var,DB_USER,DB_PASSWORD);
-            echo "connexion réussie";
         } catch (PDOException $e) {
             echo $e->getMessage();
         }
