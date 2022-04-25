@@ -28,7 +28,7 @@ class Ecommerce
                     }else if(action == 'category'){
                         this.loadCategory();
                     }else if(action == 'users'){
-                        this.loadUsers();
+                          this.loadUsers();
                     }else if(action == 'orders'){
                         this.loadOrders();
                     }
